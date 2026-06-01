@@ -21,7 +21,7 @@ function Projects() {
       tech: "HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, MySQL",
       desc: "A complete shopping website with login, products, cart, order placement, admin panel, and MySQL database storage.",
       featured: true,
-      live: "#",
+      live: "",
       github: "https://github.com/Prajwalbuilds0625/ecommerce-website",
     },
     {
@@ -30,7 +30,7 @@ function Projects() {
       image: html,
       tech: "HTML, CSS",
       desc: "A basic responsive website created using HTML and CSS for frontend practice.",
-      live: "#",
+      live: "https://magnificent-rugelach-74e09c.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/html-website",
     },
     {
@@ -39,7 +39,7 @@ function Projects() {
       image: pato,
       tech: "HTML, CSS, Bootstrap",
       desc: "A food-themed website with modern layout, sections, and responsive design.",
-      live: "#",
+      live: "https://inspiring-crumble-2336cb.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/food-website",
     },
     {
@@ -48,7 +48,7 @@ function Projects() {
       image: tourism,
       tech: "HTML, CSS, Bootstrap",
       desc: "A tourism website showcasing places, packages, and attractive frontend sections.",
-      live: "#",
+      live: "https://warm-vacherin-cea659.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/tourism-website",
     },
     {
@@ -57,7 +57,7 @@ function Projects() {
       image: boot1,
       tech: "HTML, CSS, Bootstrap",
       desc: "Responsive Bootstrap-based web layout with cards and sections.",
-      live: "#",
+      live: "https://venerable-valkyrie-a90c91.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/bootstrap-business-website",
     },
     {
@@ -66,7 +66,7 @@ function Projects() {
       image: boot2,
       tech: "HTML, CSS, Bootstrap",
       desc: "Modern Bootstrap UI project focused on layout and responsiveness.",
-      live: "#",
+      live: "https://prismatic-sprite-8ca503.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/bootstrap-landing-page",
     },
     {
@@ -75,7 +75,7 @@ function Projects() {
       image: boot3,
       tech: "HTML, CSS, Bootstrap",
       desc: "Bootstrap-based website design with clean UI components.",
-      live: "#",
+      live: "https://cute-ganache-f3bd0a.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/bootstrap-ui-project",
     },
     {
@@ -84,7 +84,7 @@ function Projects() {
       image: hospital,
       tech: "React.js, Bootstrap, JavaScript",
       desc: "A hospital website interface with doctors, departments, appointments, and contact sections.",
-      live: "#",
+      live: "https://cute-khapse-6f011e.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/hospital-management-system",
     },
     {
@@ -93,7 +93,7 @@ function Projects() {
       image: eventhub,
       tech: "HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, MySQL",
       desc: "An event management website for viewing events, registration, and event details.",
-      live: "#",
+      live: "https://idyllic-biscotti-4f4626.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/eventhub",
     },
     {
@@ -102,7 +102,7 @@ function Projects() {
       image: dashboard,
       tech: "React.js, Redux Toolkit, Bootstrap",
       desc: "A dashboard interface with statistics cards, admin panels, and responsive design.",
-      live: "#",
+      live: "https://lustrous-florentine-a13019.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/dashboard-analytics",
     },
     {
@@ -111,7 +111,7 @@ function Projects() {
       image: counter,
       tech: "React.js, Redux Toolkit, Bootstrap",
       desc: "An interactive counter app with increment, decrement, reset, and Redux state management.",
-      live: "#",
+      live: "https://super-travesseiro-6d72b5.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/redux-counter-app",
     },
     {
@@ -120,7 +120,7 @@ function Projects() {
       image: addtocart,
       tech: "React.js, Redux Toolkit, Bootstrap, jQuery",
       desc: "Shopping cart application with add to cart, quantity control, remove product, total price, and order placement.",
-      live: "#",
+      live: "https://tranquil-fox-3d829b.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/add-to-cart-project",
     },
     {
@@ -129,7 +129,7 @@ function Projects() {
       image: todo,
       tech: "React.js, Redux Toolkit, Bootstrap",
       desc: "Task manager application with add, delete, update, and complete task functionality.",
-      live: "#",
+      live: "https://incandescent-medovik-ce1d0c.netlify.app",
       github: "https://github.com/Prajwalbuilds0625/smart-todo-app",
     },
   ];
@@ -172,14 +172,16 @@ function Projects() {
                   <p className="project-tech">{project.tech}</p>
 
                   <div className="project-buttons">
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn btn-info me-2"
-                    >
-                      Live Demo
-                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-info me-2"
+                      >
+                        Live Demo
+                      </a>
+                    )}
 
                     <a
                       href={project.github}
